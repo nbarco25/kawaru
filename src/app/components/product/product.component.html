@@ -1,0 +1,8 @@
+<div class="card-container">
+
+    <h3 class="titulo-product-card three-d-text blue-text">{{product.title}}</h3>
+    <img [src]="product.image" alt="">
+    <strong class="card-price blue-text three-d-text">{{ product.price | currency}}</strong>
+    <p></p>
+    <button class="btn-add-cart" (click)="agregarCarrito()">Agregar al carrito</button>
+</div>
