@@ -12,29 +12,29 @@ import { Product } from '../../models/product.model';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnInit, OnChanges {
+export class ProductComponent implements OnInit {
 
   @Input() product: Product;
-  @Output() ProductClicked: EventEmitter<any> = new EventEmitter();
+  @Output() productClicked: EventEmitter<any> = new EventEmitter();
+  today = new Date();
 
   constructor() {
     console.log('1. Constructor');
   }
 
-  agregarCarrito(): any{
-    alert('producto agregado al carrito');
-    this.ProductClicked.emit(this.product.id);
-  }
 
+  // ngOnChanges(changes: SimpleChanges) {
+  //   console.log('2. ngOnChanges');
+  //   console.log(changes);
+  // }
 
-  ngOnInit(): void {
-    // Hacer llamadas a servicios de datos (api rest)
+  ngOnInit() {
     console.log('3. ngOnInit');
   }
 
-  ngOnChanges(changes: SimpleChanges): void{
-    console.log('2. ngOnChanges');
-    console.log(changes);
+  addCart() {
+    console.log('añadir al carrito');
+    this.productClicked.emit(this.product.id);
   }
 
 }
