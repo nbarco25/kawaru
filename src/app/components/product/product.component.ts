@@ -6,6 +6,7 @@ import { Component,
   OnChanges,
   SimpleChanges } from '@angular/core';
 import { Product } from '../../models/product.model';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-product',
@@ -14,23 +15,19 @@ import { Product } from '../../models/product.model';
 })
 export class ProductComponent implements OnInit {
 
+
   @Input() product: Product;
   @Output() productClicked: EventEmitter<any> = new EventEmitter();
   today = new Date();
 
-  constructor() {
-    console.log('1. Constructor');
+  constructor(
+  ) {
   }
-
-
-  // ngOnChanges(changes: SimpleChanges) {
-  //   console.log('2. ngOnChanges');
-  //   console.log(changes);
-  // }
 
   ngOnInit() {
-    console.log('3. ngOnInit');
   }
+
+
 
   addCart() {
     console.log('añadir al carrito');

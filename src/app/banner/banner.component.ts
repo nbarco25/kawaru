@@ -33,7 +33,6 @@ export class BannerComponent implements OnInit, AfterViewInit {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-
       },
   
     });
