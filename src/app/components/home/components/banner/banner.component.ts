@@ -16,7 +16,6 @@ export class BannerComponent implements OnInit, AfterViewInit {
   mySwiper: Swiper;
 
   constructor() { 
-    
   }
 
   ngOnInit(): void {
@@ -34,7 +33,6 @@ export class BannerComponent implements OnInit, AfterViewInit {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-  
     });
   }
 
